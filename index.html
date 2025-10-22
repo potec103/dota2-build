@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota 2 Builds - Рекомендации по билдам</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dota 2 Builds</h1>
+            <p>Лучшие рекомендации по билдам для героев Dota 2</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-selector">
+            <h2>Выберите героя</h2>
+            <div class="search-box">
+                <input type="text" id="heroSearch" placeholder="Поиск героя...">
+            </div>
+            <div class="hero-grid" id="heroGrid">
+                <!-- Герои будут загружены через JavaScript -->
+            </div>
+        </section>
+
+        <section class="build-section hidden" id="buildSection">
+            <div class="build-header">
+                <img id="heroImage" src="" alt="Hero">
+                <div class="hero-info">
+                    <h2 id="heroName"></h2>
+                    <div class="hero-attributes">
+                        <span id="heroAttribute"></span>
+                        <span id="heroRoles"></span>
+                    </div>
+                </div>
+                <button class="back-button" onclick="showHeroSelection()">← Назад к выбору</button>
+            </div>
+
+            <div class="build-tabs">
+                <button class="tab-button active" onclick="openTab('early')">Ранняя игра</button>
+                <button class="tab-button" onclick="openTab('mid')">Средняя игра</button>
+                <button class="tab-button" onclick="openTab('late')">Поздняя игра</button>
+                <button class="tab-button" onclick="openTab('talents')">Таланты</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="early" class="tab-panel active">
+                    <h3>Предметы ранней игры</h3>
+                    <div class="items-grid" id="earlyItems"></div>
+                </div>
+                
+                <div id="mid" class="tab-panel">
+                    <h3>Основные предметы</h3>
+                    <div class="items-grid" id="midItems"></div>
+                </div>
+                
+                <div id="late" class="tab-panel">
+                    <h3>Поздние предметы</h3>
+                    <div class="items-grid" id="lateItems"></div>
+                </div>
+                
+                <div id="talents" class="tab-panel">
+                    <h3>Таланты</h3>
+                    <div class="talents-grid" id="talentsList"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Dota 2 Builds. Неофициальный фанатский сайт.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
